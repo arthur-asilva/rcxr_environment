@@ -3,22 +3,27 @@
     "builds": [
       {
         "src": "main.js",
-        "use": "@now/node"
+        "use": "@vercel/node"
       }
     ],
     "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "main.js"
+    {
+      "src": "/ada/",
+      "dest": "main.js",
+      "methods": ["GET", "OPTIONS"],
+      "headers": {
+        "Access-Control-Allow-Methods": "GET",
+        "Access-Control-Allow-Headers": "Content-Type"
       }
-    ],
-    "headers": [
+    },
     {
-    "source": "/(.)",
-    "headers": [
-    {
-    "key": "Content-Security-Policy",
-    "value": "default-src * self blob: data: gap:; style-src * self 'unsafe-inline' blob: data: gap:; script-src * 'self' 'unsafe-eval' 'unsafe-inline' blob: data: gap:; object-src * 'self' blob: data: gap:; img-src * self 'unsafe-inline' blob: data: gap:; connect-src self * 'unsafe-inline' blob: data: gap:; frame-src * self blob: data: gap:;"
+      "src": "/davinci/",
+      "dest": "main.js",
+      "methods": ["GET", "OPTIONS"],
+      "headers": {
+        "Access-Control-Allow-Methods": "GET",
+        "Access-Control-Allow-Headers": "Content-Type"
+      }
     }
-    ]}]
+  ]
 }
