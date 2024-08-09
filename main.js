@@ -20,6 +20,10 @@ app.get('/davinci/', async(req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'davinci/index.html'));
 });
 
+app.get('/disco_newton/', async(req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'disco_newton/index.html'));
+});
+
 app.listen(8080, () => {
     console.log("Server successfully running on port 8080");
 });
