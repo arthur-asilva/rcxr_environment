@@ -28,6 +28,10 @@ app.get('/disco_newton/', async(req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'disco_newton/index.html'));
 });
 
+app.get('/urna_eletronica/', async(req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'urna_eletronica/index.html'));
+});
+
 app.listen(8080, () => {
     console.log("Server successfully running on port 8080");
 });
