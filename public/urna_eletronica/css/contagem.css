@@ -1,0 +1,43 @@
+body, html{
+    height: 100vh;
+    width: 100%;
+    background-color: #2980b9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 9px;
+}
+
+main .candidato{
+    display: flex;
+    flex-direction: column;
+    margin: 0px 20px;
+    align-items: center;
+}
+
+main .candidato img{
+    margin-bottom: 20px;
+}
+
+main .candidato span{
+    font-size: 20px;
+    color: #2d3436;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+button{
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-top: 20px;
+    background-color: #d63031;
+    color: #fff;
+}

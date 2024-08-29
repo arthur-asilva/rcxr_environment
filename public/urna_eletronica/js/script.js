@@ -9,6 +9,16 @@ let etapaAtual = 0;
 let numero = '';
 let votoBranco = false;
 let votos = [];
+let contagem_votos = localStorage.getItem('total');
+
+if (contagem_votos == null){
+    contagem_votos = [0, 0];
+} else {
+    contagem_votos = localStorage.getItem('total').split(',');
+    contagem_votos[0] = Number(contagem_votos[0]);
+    contagem_votos[1] = Number(contagem_votos[1]);
+    console.log(contagem_votos);
+}
 
 function comecarEtapa() {
     let etapa = etapas[etapaAtual];
@@ -135,12 +145,42 @@ function confirma() {
             comecarEtapa();
         } else {
             document.querySelector('.tela').innerHTML = '<div class="aviso--gigante pisca">FIM</div>';
-            console.log(votos);
             setTimeout(() => {
-              location.reload();
+                contagem_votos[0] += votos[0].voto == '333' ? 1 : 0;
+                contagem_votos[1] += votos[0].voto == '888' ? 1 : 0;
+                localStorage.setItem('total', `${contagem_votos[0]},${contagem_votos[1]}`);
+                location.reload();
             }, 3000);
         }
     }
+}
+
+function requestFullScreen() {
+
+    var el = document.body;
+  
+    // Supports most browsers and their versions.
+    var requestMethod = el.requestFullScreen || el.webkitRequestFullScreen 
+    || el.mozRequestFullScreen || el.msRequestFullScreen;
+  
+    if (requestMethod) {
+  
+      // Native full screen.
+      requestMethod.call(el);
+  
+    } else if (typeof window.ActiveXObject !== "undefined") {
+  
+      // Older IE.
+      var wscript = new ActiveXObject("WScript.Shell");
+  
+      if (wscript !== null) {
+        wscript.SendKeys("{F11}");
+      }
+    }
+}
+
+document.body.onclick = () => { 
+    requestFullScreen();
 }
 
 comecarEtapa();

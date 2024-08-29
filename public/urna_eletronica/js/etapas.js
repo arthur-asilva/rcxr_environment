@@ -1,48 +1,24 @@
 let etapas = [
     {
         titulo: 'VEREADOR',
-        numeros: 4,
+        numeros: 3,
         candidatos: [
             {
-                numero: '1026',
-                nome: 'ALBERT EINSTEIN',
-                partido: 'Partido dos Físicos - PDF',
+                numero: '333',
+                nome: 'MINECRAFT',
+                partido: 'Partido dos construtores - PC',
                 fotos: [
-                    {url:'einstein.png', legenda: 'Vereador'}
+                    {url:'minecraft.png', legenda: 'Vereador'}
                 ]
             },
             {
-                numero: '8020',
-                nome: 'MARIE CURIE',
-                partido: 'Partido dos Químicos - PDQ',
+                numero: '888',
+                nome: 'ROBLOX',
+                partido: 'Partido dos gamers - PG',
                 fotos: [
-                    {url:'curie.png', legenda: 'Vereador'}
+                    {url:'roblox.png', legenda: 'Vereador'}
                 ]
-            },
-            {
-                numero: '1408',
-                nome: 'ROSALIND FRANKLIN',
-                partido: 'Partido dos Químicos - PDQ',
-                fotos: [
-                    {url:'franklin.png', legenda: 'Vereador'}
-                ]
-            },
-            {
-                numero: '2112',
-                nome: 'SEYMOUR PAPERT',
-                partido: 'Partido dos Matemáticos - PM',
-                fotos: [
-                    {url:'papert.png', legenda: 'Vereador'}
-                ]
-            },
-            {
-                numero: '3142',
-                nome: 'ISAAC ASIMOV',
-                partido: 'Partido dos Escritores - PE',
-                fotos: [
-                    {url:'asimov.png', legenda: 'Vereador'}
-                ]
-            },
+            }
         ]
     }
     // {
